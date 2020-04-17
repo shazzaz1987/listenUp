@@ -1,0 +1,30 @@
+<div class="page-header">
+<h1>Climate Change is real folks. Lets talk weather,shall we?</br>
+  <small>Weather it's here or there, it's everywhere.</small></h1>
+</div>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" ><a href="/new-article" class="btn btn-default btn-lg active" role="button">New Post!</a></li>
+  <li role="presentation"><a href="/logout" class="btn btn-default btn-lg active" role="button">Logout</a></li>
+</ul>
+
+
+
+<div class="jumbotron">
+  <div class="container">
+
+  </div>
+</div>
+
+<div class="row">
+  <%allArticles.forEach(function(article){%>
+   <div class="col-md-4">
+     <ul>
+      <li><strong>Author ID: </strong><%=article.user %></li>
+      <li><strong>Title: </strong><a href="/articles/<%=article._id%>"><%=article.title%></a></li>
+      <li><strong>Article: </strong><%=article.body %></li>
+      <li><strong>Date: </strong><%=article.date %></li>
+     </ul>
+    </div>
+    <%})%>
+  </div>

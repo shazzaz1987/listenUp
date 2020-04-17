@@ -1,0 +1,36 @@
+<div class="page-header">
+<h1>Climate Change is real folks. Lets talk weather,shall we?</br>
+  <small>Welcome, please join the discussion.</small></h1>
+</div>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" ><a href="/articles" class="btn btn-default btn-lg active" role="button">Back to Index</a></li>
+  <li role="presentation"><a href="/logout" class="btn btn-default btn-lg active" role="button">Logout</a></li>
+</ul>
+
+<div class="jumbotron">
+  <div class="container">
+  </div>
+</div>
+
+<form class="form-horizontal" action="/new-article" method="post" id="articleForm">
+
+    <div class="form-group">
+      <label for="">Title:</label>
+        <div class="col-sm-10">
+        <input type="text" name="article[title]"  class="form-control"  placeholder="What's it gonna be champ?" >
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="">Article:</label>
+      <div class="col-sm-10">
+        <textarea name="article[body]"  placeholder="Fire away!" class="form-control" form="articleForm"> </textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Rock you like a hurricane!</button>
+      </div>
+    </div>
+    <input type="hidden" name="article[user]" value="<%=user.id%>">
+</form>

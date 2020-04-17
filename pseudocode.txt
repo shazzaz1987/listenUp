@@ -1,0 +1,18 @@
+About the Project?
+
+This app is designed to be a SINGLE user blog. Each instance of the app is used by the person who has signed in . Upon signing in, he/she is free to post on any weather/climate related topic. Passers by can post comments on users' blog posts'. The app is hosted on heroku, a git based server. Each user , post and comment is based on a schema(object) and is stored on a remote database known as mongoDB.
+
+Workflow! The nuts & bolts
+
+1.Account creation
+USer types details in input fields
+Username and password is assigned to that particular user. Its then saved as an object on mongoDB. Username is taken as the user's email address. Password is a 6 character string and can comprise of letters and/or numbers ONLY. No special characteristics are allowed.
+
+2.User sign in
+user uses his username and password to sign in. This is authenticated against his details stored on mongoDB.If it matches, he is granted access. If it doesnt he is returned a flash error message saying his creds are wrong
+
+3.Posting Blogs
+upon successful authentication, user is presented rendered HTML which comprises a title and article field as well as a submit button. The user titles his post to his liking and writes the same. When the user presses submit, like the user details, the entire post is routed via mongoose and stored as an object on mongoDB with a unique ID.
+
+4. Commenting
+Any netizen can post comments on posts. The netizen inputs his name  , titles his post 

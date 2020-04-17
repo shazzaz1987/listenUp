@@ -1,0 +1,35 @@
+<div class="page-header">
+<h1>Climate Change is real folks.Create your account and create a storm!</h1>
+</div>
+
+<div class="msg">
+  <% if(message.length > 0) { %>
+    <div class="alert alert-danger">
+      <%= message %>
+    </div>
+  <% } %>
+</div>
+
+<form class="form-inline" action="/signup" method="post">
+    <div class="form-group">
+      <label class="sr-only">Name</label>
+      <input type="text" name="user[name]" class="form-control" id="exampleInputEmail3" placeholder="Your name">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputEmail3">Email address</label>
+      <input type="text" name="user[email]" placeholder="Your user email" class="form-control" id="exampleInputEmail3">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputPassword3">Password</label>
+      <input type="password" name="user[password]"  placeholder="Your user password" class="form-control" id="exampleInputEmail3">
+    </div>
+    <button type="submit" class="btn btn-default">Sign up</button>
+    <p>Have an account?</p>
+    <a class="btn btn-default" href="/login" role="button">Sign In</a>
+</form>
+
+<div class="jumbotron">
+  <div class="container">
+
+  </div>
+</div>
