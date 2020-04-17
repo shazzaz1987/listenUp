@@ -11,7 +11,7 @@ var cookieParser = require('cookie-parser');
 var helmet = require('helmet');
 var MongoStore = require('connect-mongo')(session)
 var methodOverride = require('method-override')
-//var dotenv = require('dotenv')
+var dotenv = require('dotenv')
 var compression = require('compression');
 var mongoose = require('mongoose')
 mongoose.Promise = global.Promise
@@ -19,7 +19,7 @@ mongoose.Promise = global.Promise
 /*
  Load environment variables from .env file, where API keys and passwords are configured.
  */
-
+dotenv.load({ path: '.env.' + process.env.NODE_ENV })
 var dev_db_url = "mongodb+srv://shamim1987:<Gekmui10>@cluster0-9f1tg.gcp.mongodb.net/test?retryWrites=true&w=majority";
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
@@ -27,7 +27,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
-//dotenv.load({ path: '.env.' + process.env.NODE_ENV })
+
 //mongoose.connect(process.env.MONGO_URI)
 app.use(methodOverride)
 app.use(morgan('dev'))
