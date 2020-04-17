@@ -7,7 +7,7 @@ var flash = require('connect-flash')
 var session = require('express-session')
 var passport = require('passport')
 var path = require('path');
-var cookieParser = require('cookie-parser');
+//var cookieParser = require('cookie-parser');
 var helmet = require('helmet');
 var MongoStore = require('connect-mongo')(session)
 var methodOverride = require('method-override')
@@ -49,7 +49,7 @@ app.use(passport.session())
 app.use(flash())
 app.use(helmet())
 // serve static files
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')))
 
 
