@@ -1,5 +1,5 @@
 <div class="page-header">
-<h1>Climate Change is real folks. Lets talk weather,shall we?</br>
+<h1>Dont feel alone.We are Listening</br>
   <small>This is where you view a post and it's judgement</small></h1>
 </div>
 
@@ -18,6 +18,7 @@
   <li><strong>Author ID:</strong><%=article.user %></li>
   <li><strong>Title :</strong><%=article.title%></li>
   <li><strong>Article: </strong><%=article.body %></li>
+  <li><strong>Date Added: </strong><%=article.date %></li>
   <li><a href ="/<%=article._id%>/new-comment/">Click here to add a comment</a></li>
   <li><a href ="/articles/<%=article._id %>/edit">Click here to edit this post</a></li>
   <li><a href ="/articles/<%=article._id %>/delete" >Click here to delete this post</a></li>
@@ -27,6 +28,7 @@
      <li><strong>Author: </strong><%=comment.author %></li>
      <li><strong>Title: </strong><%=comment.title %></li>
      <li><strong>Body: </strong><%=comment.body %></li>
+     <li><strong>Date Judged: </strong><%=comment.date %></li>
      <li><form method="post" action="/articles/<%=article._id %>/remove-comment" ><button type="submit" name="comment[delete]">Delete comment</button></form>
      </li>
    </ul>
